@@ -6,7 +6,7 @@
 /*   By: Marai <MasaDevs@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:54:10 by keys              #+#    #+#             */
-/*   Updated: 2023/02/28 15:27:29 by Marai            ###   ########.fr       */
+/*   Updated: 2023/03/01 01:07:42 by Marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ void	_err(const char *e)
 int	main(int argc, char **argv, char **envp)
 {
 	char	*line;
+	char 	*line2;
 	//bool	flag;
 	//t_token	*token;
 	//t_node	*tree;
 	t_env	*env;
+	//t_env	*bash;
 
 	(void)argc;
 	(void)argv;
@@ -52,7 +54,11 @@ int	main(int argc, char **argv, char **envp)
 			add_history(line);
 
 		printf("%ld\n" , vari_expand_len(line, env));
-		printf("%s\n", vari_expand(line, env));
+		line2 = vari_expand(line, env);
+		printf("%s\n", line2);
+		line2 = expand_quote(line2);
+		printf("%s\n", line2);
+		free(line2);
 		/*
 		token = lexer(&line);
 		flag = token_error(token);
@@ -85,3 +91,5 @@ int	main(int argc, char **argv, char **envp)
 	// rl_clear_history();
 	return (0);
 }
+
+

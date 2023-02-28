@@ -57,5 +57,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 ssize_t vari_expand_len(char *line, t_env *env);
 char	*vari_expand(char *line, t_env *env);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+char	*expand_quote(char *line);
 void test(t_node *node);
 #endif

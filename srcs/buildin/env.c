@@ -164,3 +164,48 @@ char	*vari_expand(char *line, t_env *env)
 	}
 	return (expanded);
 }
+
+int is_quote(char c)
+{
+	return (c == '\'' || c == '\"' || c == '`');
+}
+
+char	*expand_quote(char *line)
+{
+	ssize_t	i;
+	ssize_t	j;
+	ssize_t	len;
+	ssize_t	diff;
+	char	*line2;
+	char	*last;
+
+	if (!line)
+		return (NULL);
+
+	len = strlen(line);	
+	line2 = malloc(sizeof(char) * len);
+	if (!line2)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (line[i])
+	{
+		while (isspace(line[i]) && isspace(line[i + 1]))
+			i++;
+		if (is_quote(line[i]))
+		{
+			last = strchr(&line[i + 1], line[i]);
+			diff = last - &line[i];
+			ft_strlcpy(&line2[j], &line[i + 1], last - &line[i]);
+			i += diff;
+			j += diff - 2;
+		}
+		else
+			line2[j] = line[i];
+		printf("%ld %ld\n", i, j);
+		i++;
+		j++;
+	}
+	free(line);
+	return (line2);	
+}
