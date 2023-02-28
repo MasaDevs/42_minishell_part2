@@ -157,15 +157,10 @@ char	*vari_expand(char *line, t_env *env)
 		if (line[i] == '\'')
 			quote_counter++;
 		if (line[i] == '$' && quote_counter % 2 == 0 && (i == 0 || line[i - 1] != '\\'))
-		{
-			i++;
-			i += make_expand(expanded, &line[i], env);
-		}
+			i += make_expand(expanded, &line[i + 1], env);
 		else
-		{
 			strncat(expanded, &line[i], 1);
-			i++;
-		}
+		i++;
 	}
 	return (expanded);
 }
