@@ -6,7 +6,7 @@
 /*   By: Marai <MasaDevs@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:54:10 by keys              #+#    #+#             */
-/*   Updated: 2023/02/28 14:32:28 by Marai            ###   ########.fr       */
+/*   Updated: 2023/02/28 15:27:29 by Marai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int	main(int argc, char **argv, char **envp)
 		if (*line)
 			add_history(line);
 
-		printf("%s\n", line);
 		printf("%ld\n" , vari_expand_len(line, env));
 		printf("%s\n", vari_expand(line, env));
 		/*
