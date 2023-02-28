@@ -1,0 +1,65 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/masahitoarai/Documents/42/minishell/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+CMDLINE	./include/struct.h	/^	CMDLINE,$/;"	e	enum:e_redirect
+FILENAME	./include/struct.h	/^	FILENAME,$/;"	e	enum:e_redirect
+GET_NEXT_LINE_H	./include/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
+MAX	./include/get_next_line.h	/^# define MAX /;"	d
+MAX_FD	./include/get_next_line.h	/^# define MAX_FD /;"	d
+MINISHELL_H	./include/minishell.h	/^# define MINISHELL_H$/;"	d
+OP	./include/struct.h	/^	OP,$/;"	e	enum:e_token_type
+PIPE	./include/struct.h	/^	PIPE,$/;"	e	enum:e_redirect
+REDIRECT	./include/struct.h	/^	REDIRECT,$/;"	e	enum:e_redirect
+RESERVED	./include/struct.h	/^	RESERVED,$/;"	e	enum:e_token_type
+STRUCT_H	./include/struct.h	/^# define STRUCT_H$/;"	d
+T_EOF	./include/struct.h	/^	T_EOF,$/;"	e	enum:e_token_type
+T_EOF_R	./include/struct.h	/^	T_EOF_R,$/;"	e	enum:e_redirect
+WORD	./include/struct.h	/^	WORD,$/;"	e	enum:e_token_type
+_err	./srcs/main.c	/^void	_err(const char *e)$/;"	f	typeref:typename:void
+e_redirect	./include/struct.h	/^enum						e_redirect$/;"	g
+e_token_type	./include/struct.h	/^enum						e_token_type$/;"	g
+fd	./include/struct.h	/^	int						fd;$/;"	m	struct:s_fd	typeref:typename:int
+fd	./include/struct.h	/^	t_fd					*fd;$/;"	m	struct:s_node	typeref:typename:t_fd *
+key	./include/struct.h	/^	char					*key;$/;"	m	struct:s_env	typeref:typename:char *
+left	./include/struct.h	/^	t_node					*left;$/;"	m	struct:s_node	typeref:typename:t_node *
+line	./include/struct.h	/^	t_line					*line;$/;"	m	struct:s_node	typeref:typename:t_line *
+main	./srcs/main.c	/^int	main(int argc, char **argv, char **envp)$/;"	f	typeref:typename:int
+newfd	./include/struct.h	/^	int						newfd;$/;"	m	struct:s_fd	typeref:typename:int
+next	./include/struct.h	/^	t_env					*next;$/;"	m	struct:s_env	typeref:typename:t_env *
+next	./include/struct.h	/^	t_line					*next;$/;"	m	struct:s_line	typeref:typename:t_line *
+next	./include/struct.h	/^	t_node					*next;$/;"	m	struct:s_node	typeref:typename:t_node *
+next	./include/struct.h	/^	t_token					*next;$/;"	m	struct:s_token	typeref:typename:t_token *
+oldfd	./include/struct.h	/^	int						oldfd;$/;"	m	struct:s_fd	typeref:typename:int
+prev	./include/struct.h	/^	t_env					*prev;$/;"	m	struct:s_env	typeref:typename:t_env *
+print_line	./srcs/print.c	/^void	print_line(t_line *line)$/;"	f	typeref:typename:void
+print_n	./srcs/print.c	/^void	print_n(t_node *node)$/;"	f	typeref:typename:void
+print_node	./srcs/print.c	/^void	print_node(t_node *node)$/;"	f	typeref:typename:void
+print_split	./srcs/print.c	/^void	print_split(char **t)$/;"	f	typeref:typename:void
+print_t	./srcs/print.c	/^void	print_t(t_token *token)$/;"	f	typeref:typename:void
+print_tree	./srcs/print.c	/^void	print_tree(t_node *node)$/;"	f	typeref:typename:void
+right	./include/struct.h	/^	t_node					*right;$/;"	m	struct:s_node	typeref:typename:t_node *
+s_env	./include/struct.h	/^struct						s_env$/;"	s
+s_fd	./include/struct.h	/^struct						s_fd$/;"	s
+s_line	./include/struct.h	/^struct						s_line$/;"	s
+s_node	./include/struct.h	/^struct						s_node$/;"	s
+s_token	./include/struct.h	/^struct						s_token$/;"	s
+t_env	./include/struct.h	/^typedef struct s_env		t_env;$/;"	t	typeref:struct:s_env
+t_fd	./include/struct.h	/^typedef struct s_fd			t_fd;$/;"	t	typeref:struct:s_fd
+t_line	./include/struct.h	/^typedef struct s_line		t_line;$/;"	t	typeref:struct:s_line
+t_node	./include/struct.h	/^typedef struct s_node		t_node;$/;"	t	typeref:struct:s_node
+t_redirect	./include/struct.h	/^typedef enum e_redirect		t_redirect;$/;"	t	typeref:enum:e_redirect
+t_token	./include/struct.h	/^typedef struct s_token		t_token;$/;"	t	typeref:struct:s_token
+t_token_type	./include/struct.h	/^typedef enum e_token_type	t_token_type;$/;"	t	typeref:enum:e_token_type
+token	./include/struct.h	/^	t_token					*token;$/;"	m	struct:s_line	typeref:typename:t_token *
+type	./include/struct.h	/^	t_redirect				type;$/;"	m	struct:s_line	typeref:typename:t_redirect
+type	./include/struct.h	/^	t_token_type			type;$/;"	m	struct:s_token	typeref:typename:t_token_type
+value	./include/struct.h	/^	char					*value;$/;"	m	struct:s_env	typeref:typename:char *
+word	./include/struct.h	/^	char					*word;$/;"	m	struct:s_token	typeref:typename:char *
